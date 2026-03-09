@@ -1,0 +1,19 @@
+{
+ "operations": [
+  {
+   "column": "salary",
+   "action": "multiply",
+   "value": 1.1
+  },
+  {
+   "column": "salary",
+   "action": "add",
+   "value": 5000
+  },
+  {
+   "column": "age",
+   "action": "filter",
+   "value": 25
+  }
+ ]
+}
