@@ -30,14 +30,6 @@ The project demonstrates backend data processing using Django, Pandas, and REST 
 
 ---
 
-## Installation
-
-Clone the repository
-git clone https://github.com/Ainy07/knowella.git
-
-
----
-
 ## API Endpoints
 
 ### Upload File
