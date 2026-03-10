@@ -157,10 +157,10 @@ Cache Timeout:
 
 ## Installation
 
-# Clone the repository
+## Clone the repository
 
 
-```git clone https://github.com/Ainy07/social-hot-topics.git```
+```git clone https://github.com/Ainy07/knowella.git```
 
 
 ## Move to project directory
