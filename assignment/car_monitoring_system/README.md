@@ -24,21 +24,45 @@ Cars then decide:
 
 ---
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
-Car Simulator
-⬇
-Telemetry API
-⬇
-Telemetry Data Storage
-⬇
-Monitoring Logic Engine
-⬇
-Update Decision Engine
-⬇
-Update Database
-⬇
-Car checks updates
+```
+                Car Simulator
+                      │
+                      │
+                Telemetry API
+             (POST /api/telemetry/)
+                      │
+                      │
+              Telemetry Processing
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+ Monitoring Logic Engine     Telemetry Database
+ (Engine Temp Analysis)      (TelemetryData Table)
+        │
+        │
+   Update Decision Engine
+ (Critical / Non-Critical)
+        │
+        │
+        Update Service
+        │
+        │
+      Update Database
+        (Update Table)
+        │
+        │
+        Car System
+        │
+        │
+   GET /api/update/?car=id
+        │
+        │
+   Car decides update timing
+ (Immediate / Scheduled)
+```
+
 
 ---
 
@@ -315,8 +339,8 @@ python car_simulator.py
 
 # 👩‍💻 Author
 
-Ainy Gupta
-Backend Developer
+Ainy Gupta , 
+Backend Developer ,
 Python | Django | REST APIs
 
 GitHub: https://github.com/Ainy07
